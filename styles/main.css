@@ -326,6 +326,15 @@ textarea {
   height: 600px;
   border-radius: 300px; }
 
+.clock__minute_position,
+.clock__second_position,
+.clock__center_position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
 .clock__minute {
   background: #d15559;
   width: 200px;
@@ -337,17 +346,11 @@ textarea {
           animation: minute 3600s infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-transform-origin: top left;
-          transform-origin: top left; }
-
-.clock__minute_position,
-.clock__second_position,
-.clock__center_position {
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  left: 50.5%; }
 
 .clock__center {
   width: 30px;
@@ -356,24 +359,20 @@ textarea {
   background: #4b9aaa;
   position: absolute;
   top: 50%;
-  left: 50.5%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  left: 50.5%; }
 
 .clock__second {
   background: #4b9aaa;
   width: 300px;
   height: 9px;
   border-radius: 5px;
-  -webkit-animation: second 20s infinite steps(60);
-          animation: second 20s infinite steps(60);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  -webkit-animation: second 60s infinite steps(60);
+          animation: second 60s infinite steps(60);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
   position: absolute;
   top: 49.5%;
-  left: 50.5%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  left: 50.5%; }
 
 @-webkit-keyframes minute {
   0% {
